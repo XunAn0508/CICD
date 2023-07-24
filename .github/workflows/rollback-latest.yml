@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
       - id: latest
         uses: thebritican/fetch-latest-release@v1.0.3
         with:
