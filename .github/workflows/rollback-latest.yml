@@ -162,18 +162,20 @@ jobs:
   
   migrate-database:
     needs: [Deploy]
-    if: ${{ needs.Deploy.result == 'success' }}  # Run only if the Deploy job is successful
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      # Install any dependencies required for running migrations (e.g., dotnet, EF Core, etc.)
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '6.x'  # Replace with the appropriate .NET Core version
+          dotnet-install-dir: /usr/share/dotnet  # Specify the full path to the dotnet installation directory
+
+      - name: Install EF Core CLI tools
+        run: dotnet tool install --global dotnet-ef
 
       # Replace the following with the actual command to perform database migration
       - name: Migrate Database
