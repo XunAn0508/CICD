@@ -24,7 +24,7 @@ jobs:
         run: |
           cd ./.github/workflows/actions/rollback
           # Add your build and publish commands here
-          run: sh rollback.yml  # Replace with the actual YAML file name
+          sh rollback.yml  # Replace with the actual YAML file name
 
       - name: Deployed Production
         run: echo "Deployed Production"
