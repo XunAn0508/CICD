@@ -19,8 +19,13 @@ jobs:
         with: 
           ref: ${{ steps.latest.outputs.tag_name }}
 
-      - name: Build and Check then Publish Production
-        uses: ./.github/workflows/actions/rollback  # Replace with the correct path to your action.yml file
+      - name: Check path
+        run: |
+          pwd
+          ls
+        
+      #- name: Build and Check then Publish Production
+      #  uses: ./.github/workflows/actions/rollback  # Replace with the correct path to your action.yml file
 
       - name: Deployed Production
         run: echo "Deployed Production"
