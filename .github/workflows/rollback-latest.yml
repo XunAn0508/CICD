@@ -30,8 +30,23 @@ jobs:
       - name: Deployed Production
         run: echo "Deployed Production"
         
+  Deploy:
+    needs: [deploy-on-release]
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      
+      - name: Download Backend artifact
+        uses: actions/download-artifact@v2
+        with:
+            name: backend-artifact
+            path: backend-dist
+          
       - name: Deploy Backend to IIS
         run: |
           cd backend-dist
           cd aspnet-core/src/CompanyWebsite.Web.Host
           dotnet publish CompanyWebsite.Web.Host.csproj --configuration Release --output ./publish /p:WebPublishMethod=MSDeploy /p:DeployIisAppPath="${{ secrets.IIS_NAME }}" /p:MSDeployServiceURL="${{ secrets.IIS_URL }}" /p:UserName="${{ secrets.IIS_USERNAME}}" /p:Password="${{ secrets.IIS_PASSWORD}}" /p:AllowUntrustedCertificate=true
+  
