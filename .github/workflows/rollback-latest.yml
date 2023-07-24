@@ -18,13 +18,9 @@ jobs:
         uses: actions/checkout@v2
         with: 
           ref: ${{ steps.latest.outputs.tag_name }}
-          path: .  # This will checkout the repository at the root level
 
       - name: Build and Check then Publish Production
-        run: |
-          cd ./.github/workflows/actions/rollback
-          # Add your build and publish commands here
-          sh rollback.yml  # Replace with the actual YAML file name
+        uses: ./.github/workflows/actions/rollback  # Replace with the correct path to your action.yml file
 
       - name: Deployed Production
         run: echo "Deployed Production"
