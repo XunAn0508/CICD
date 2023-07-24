@@ -181,4 +181,4 @@ jobs:
       - name: Migrate Database
         run: |
           cd Backend/aspnet-core  # Navigate to your project folder containing the migrations
-          dotnet ef database update  # Execute the EF Core migration command
+          dotnet ef database update --project CompanyWebsite.EntityFrameworkCore.csproj --startup-project CompanyWebsite.Web.Host.csproj --no-build  # Replace YourEFCoreProject.csproj and YourStartupProject.csproj with your actual project file names
