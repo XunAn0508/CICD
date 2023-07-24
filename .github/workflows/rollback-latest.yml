@@ -19,8 +19,8 @@ jobs:
         with: 
           ref: ${{ steps.latest.outputs.tag_name }}
           
-      #- name: Build and Check then Publish Production
-      #  uses: ./.github/actions/rollback
+      - name: Build and Check then Publish Production
+        uses: ./.github/actions/rollback
         
       - name: Deployed Production
         run: echo "Deployed Production"
