@@ -163,24 +163,23 @@ jobs:
   migrate-database:
     needs: [Deploy]
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
 
       - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '6.x'  # Replace with the appropriate .NET Core version
-          dotnet-install-dir: /usr/share/dotnet  # Specify the full path to the dotnet installation directory
 
-      - name: Install EF Core CLI tools
-        run: dotnet tool install --global dotnet-ef
-
-      - name: Display contents of Backend/aspnet-core before changing directory
-        run: ls -R "${{ github.workspace }}/Backend/aspnet-core"
+      - name: Install EF Core CLI
+        run: dotnet tool install dotnet-ef --global
+        shell: bash
 
       - name: Migrate Database
         run: |
           cd Backend/aspnet-core  # Navigate to your project folder containing the migrations
           dotnet ef database update --no-build -- --project ../CompanyWebsite.EntityFrameworkCore/CompanyWebsite.EntityFrameworkCore.csproj --startup-project ../CompanyWebsite.Web.Host/CompanyWebsite.Web.Host.csproj
+        shell: bash
+        env:
+          DOTNET_ROOT: /home/runner/.dotnet
