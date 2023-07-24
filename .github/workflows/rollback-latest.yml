@@ -9,9 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - name: Go to Path and Check
-        run: cd ./.github/actions/rollback
-
       - name: Checkout Code
         uses: actions/checkout@v2
 
@@ -19,6 +16,9 @@ jobs:
         uses: thebritican/fetch-latest-release@v1.0.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Go to Path and Check
+        run: cd ./.github/actions/rollback
 
       - name: Build and Check then Publish Production
         run: sh rollback.yml  # Replace with the actual YAML file name
