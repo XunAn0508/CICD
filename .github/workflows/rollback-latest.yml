@@ -12,6 +12,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
+      - name: check path
+        run: |
+          pwd
+          ls
+          
       - id: latest
         uses: thebritican/fetch-latest-release@v1.0.3
         with:
