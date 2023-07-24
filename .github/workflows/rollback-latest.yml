@@ -160,3 +160,23 @@ jobs:
           cd aspnet-core/src/CompanyWebsite.Web.Host
           dotnet publish CompanyWebsite.Web.Host.csproj --configuration Release --output ./publish /p:WebPublishMethod=MSDeploy /p:DeployIisAppPath="${{ secrets.IIS_NAME }}" /p:MSDeployServiceURL="${{ secrets.IIS_URL }}" /p:UserName="${{ secrets.IIS_USERNAME}}" /p:Password="${{ secrets.IIS_PASSWORD}}" /p:AllowUntrustedCertificate=true
   
+  migrate-database:
+    needs: [Deploy]
+    if: ${{ needs.Deploy.result == 'success' }}  # Run only if the Deploy job is successful
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      # Install any dependencies required for running migrations (e.g., dotnet, EF Core, etc.)
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.x'  # Replace with the appropriate .NET Core version
+
+      # Replace the following with the actual command to perform database migration
+      - name: Migrate Database
+        run: |
+          cd Backend/aspnet-core  # Navigate to your project folder containing the migrations
+          dotnet ef database update  # Execute the EF Core migration command
