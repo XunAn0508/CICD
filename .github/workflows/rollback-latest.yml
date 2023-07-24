@@ -38,11 +38,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       
-      - name: Download Backend artifact
-        uses: actions/download-artifact@v2
-        with:
-            name: backend-artifact
-            path: backend-dist
           
       - name: Deploy Backend to IIS
         run: |
