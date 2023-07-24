@@ -1,10 +1,11 @@
 name: Build and Check then Publish Production
-description: Build and Check then Publish Production
-inputs:
-  publish:
-    required: true
-
- Frontend:
+on:
+  push:
+    branches:
+       main
+ 
+jobs: 
+  Frontend:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,12 +23,6 @@ inputs:
           
       - name: Checkout Repository
         uses: actions/checkout@v2
-      
-      - name: Build Frontend
-        env:
-            # Accessing the secret variable
-            FTEST_PATH: ${{ secrets.FRONTEND_SOLUTION_PATH }}
-        run: dotnet build "${GITHUB_WORKSPACE}/${FTEST_PATH}"
     
       - name: Npm install
         run: |
@@ -65,33 +60,27 @@ inputs:
            cd Frontend/angular
            npx ng build
 
-      - name: Archive Frontend build
+      - name: Display contents of Frontend/angular/dist before copying
+        run: ls -R "${{ github.workspace }}/Frontend/angular/dist"
+
+      - name: Copy Frontend build to FBUILD_PATH
         env:
-            # Accessing the secret variable
-            FBUILD_PATH: ${{ secrets.BUILD_FRONTEND }}
+          # Accessing the secret variable
+          FBUILD_PATH: ${{ secrets.BUILD_FRONTEND }}
+        run: cp -R "${{ github.workspace }}/Frontend/angular/dist" "${{ github.workspace }}/${FBUILD_PATH}"
+
+      - name: Display contents of FrontendDist after copying
+        env:
+          # Accessing the secret variable
+          FBUILD_PATH: ${{ secrets.BUILD_FRONTEND }}
+        run: ls -R "${{ github.workspace }}/${FBUILD_PATH}"
+        
+      - name: Archive Backend
         uses: actions/upload-artifact@v2
         with:
-           name: frontend-artifact
-           path: "${{ github.workspace }}/Frontend/angular/dist"
-           
-      - name: Download Frontend artifact
-        uses: actions/download-artifact@v2
-        with:
-            name: frontend-artifact
-            path: frontend-dist
-
-      - name: Copy Frontend build to FrontendDist
-        env:
-            # Accessing the secret variable
-            FBUILD_PATH: ${{ secrets.BUILD_FRONTEND }}
-        run: cp -R frontend-dist/* "${{ github.workspace }}/${FBUILD_PATH}"
-      
-      - name: Display contents of FrontendDist
-        env:
-            # Accessing the secret variable
-            FBUILD_PATH: ${{ secrets.BUILD_FRONTEND }}
-        run: ls -R "${{ github.workspace }}/${FBUILD_PATH}"   
-        
+           name: backend-artifact
+           path: "${{ github.workspace }}/Backend"
+         
   Backend:
     needs: [Frontend]
     runs-on: ubuntu-latest
@@ -125,17 +114,40 @@ inputs:
           TEST_PATH: ${{ secrets.BACKEND_TEST_PATH }}
         run: dotnet test "${GITHUB_WORKSPACE}/${TEST_PATH}"
         
-  deploy:
+  Deploy:
     needs: [Frontend, Backend]
     runs-on: windows-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-
+      
+      - name: Download Backend artifact
+        uses: actions/download-artifact@v2
+        with:
+            name: backend-artifact
+            path: backend-dist
+          
       - name: Deploy Backend to IIS
         run: |
-          cd Backend/aspnet-core/src/CompanyWebsite.Web.Host
-          #dotnet publish CompanyWebsite.Web.Host.csproj /p:PublishProfile=./Properties/PublishProfiles/IISProfile.pubxml --configuration Release 
+          cd backend-dist
+          cd aspnet-core/src/CompanyWebsite.Web.Host
           dotnet publish CompanyWebsite.Web.Host.csproj --configuration Release --output ./publish /p:WebPublishMethod=MSDeploy /p:DeployIisAppPath="${{ secrets.IIS_NAME }}" /p:MSDeployServiceURL="${{ secrets.IIS_URL }}" /p:UserName="${{ secrets.IIS_USERNAME}}" /p:Password="${{ secrets.IIS_PASSWORD}}" /p:AllowUntrustedCertificate=true
+  
+  release-on-push:
+    needs: [Frontend, Backend,Deploy]
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - id: release
+        uses: rymndhng/release-on-push-action@master
+        with:
+          bump_version_scheme: minor
+          tag_prefix: v
           
+      - name: Check Output Parameters
+        run: |
+          echo "Got tag name ${{ steps.release.outputs.tag_name }}"
+          echo "Got release version ${{ steps.release.outputs.version }}"
+          echo "Upload release artifacts to ${{ steps.release.outputs.upload_url }}"
