@@ -177,7 +177,10 @@ jobs:
       - name: Install EF Core CLI tools
         run: dotnet tool install --global dotnet-ef
 
+      - name: Display contents of Backend/aspnet-core before changing directory
+        run: ls -R "${{ github.workspace }}/Backend/aspnet-core"
+
       - name: Migrate Database
         run: |
           cd Backend/aspnet-core  # Navigate to your project folder containing the migrations
-          dotnet ef database update --project CompanyWebsite.EntityFrameworkCore.csproj --startup-project CompanyWebsite.Web.Host.csproj --no-build
+          dotnet ef database update --no-build -- --project ../CompanyWebsite.EntityFrameworkCore/CompanyWebsite.EntityFrameworkCore.csproj --startup-project ../CompanyWebsite.Web.Host/CompanyWebsite.Web.Host.csproj
