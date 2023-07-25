@@ -1,0 +1,40 @@
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.dll.config
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.deps.json
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.runtimeconfig.json
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.dll
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.pdb
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.Core.dll
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.Core.pdb
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.csproj.AssemblyReference.cache
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.csproj.SuggestedBindingRedirects.cache
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.dll.config
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.AssemblyInfoInputs.cache
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.AssemblyInfo.cs
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.csproj.CopyComplete
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.dll
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\refint\CompanyWebsite.EntityFrameworkCore.dll
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.pdb
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.genruntimeconfig.cache
+C:\Users\suppo\Downloads\CompanyWebsite\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\ref\CompanyWebsite.EntityFrameworkCore.dll
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.dll.config
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.deps.json
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.runtimeconfig.json
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.dll
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.EntityFrameworkCore.pdb
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.Core.dll
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\bin\Release\net7.0\CompanyWebsite.Core.pdb
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.csproj.AssemblyReference.cache
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.csproj.SuggestedBindingRedirects.cache
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.dll.config
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.AssemblyInfoInputs.cache
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.AssemblyInfo.cs
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.csproj.CopyComplete
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.dll
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\refint\CompanyWebsite.EntityFrameworkCore.dll
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.pdb
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\CompanyWebsite.EntityFrameworkCore.genruntimeconfig.cache
+C:\Users\SA\Desktop\Completed 8dge website\CompanyWebsite\8.1.0\aspnet-core\src\CompanyWebsite.EntityFrameworkCore\obj\Release\net7.0\ref\CompanyWebsite.EntityFrameworkCore.dll
