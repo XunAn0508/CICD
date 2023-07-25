@@ -167,10 +167,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Setup .NET Core SDK
+      - name: Setup .NET Core SDK 7.0.0
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0'  # Replace with the appropriate .NET Core version
+          dotnet-version: 7.0.0
+          source-url: https://nuget.pkg.github.com/arundo/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{ inputs.nuget-read-token }}
 
       - name: Install EF Core CLI
         run: dotnet tool install dotnet-ef --global
