@@ -170,7 +170,7 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.x'  # Replace with the appropriate .NET Core 6.0 version
+          dotnet-version: '7.0.x'  # Replace with the appropriate .NET Core 6.0 version
 
       - name: Install EF Core CLI
         run: dotnet tool install dotnet-ef --global
