@@ -177,6 +177,9 @@ jobs:
 
       - name: Show .NET Core version
         run: dotnet --version
+        
+      - name: Restore NuGet Packages
+        run: dotnet restore Backend/aspnet-core/src/CompanyWebsite.EntityFrameworkCore
 
       - name: Migrate Database
         run: |
