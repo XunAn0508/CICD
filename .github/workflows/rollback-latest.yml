@@ -178,8 +178,8 @@ jobs:
 
       - name: Migrate Database
         run: |
-          cd Backend/aspnet-core/src  # Navigate to your project folder containing the migrations
-          dotnet ef database update --no-build -- --project ../CompanyWebsite.EntityFrameworkCore/CompanyWebsite.EntityFrameworkCore.csproj --startup-project ../CompanyWebsite.Web.Host/CompanyWebsite.Web.Host.csproj
+          cd Backend/aspnet-core/src/CompanyWebsite.EntityFrameworkCore  # Navigate to your project folder containing the migrations
+          dotnet ef database update --no-build --project CompanyWebsite.EntityFrameworkCore.csproj
         shell: bash
         env:
           DOTNET_ROOT: /home/runner/.dotnet
