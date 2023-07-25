@@ -23,6 +23,15 @@ jobs:
         run: |
           pwd
           ls
+          
+      - name: Public IP
+        id: ip
+        uses: haythem/public-ip@v1.3
+
+      - name: Print Public IP
+        run: |
+          echo ${{ steps.ip.outputs.ipv4 }}
+          echo ${{ steps.ip.outputs.ipv6 }}
         
       #- name: Build and Check then Publish Production
       #  uses: ./.github/workflows/actions/rollback  # Replace with the correct path to your action.yml file
