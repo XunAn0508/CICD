@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy-on-release:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     environment: production
     steps:
       - id: latest
@@ -41,7 +41,7 @@ jobs:
         
   Frontend:
     needs: [deploy-on-release]
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         dotnet-version: ['6.0']
@@ -118,7 +118,7 @@ jobs:
          
   Backend:
     needs: [Frontend]
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         dotnet-version: ['6.0']
